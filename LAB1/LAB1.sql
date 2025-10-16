@@ -1,0 +1,37 @@
+select newdatabase();
+USE newdatabase;
+
+DROP TABLE STUDENT;
+
+CREATE TABLE STUDENT (
+    stdid INT(5), 
+    stdname VARCHAR(20), 
+    dob DATE, 
+    doj DATE, 
+    fee INT(5), 
+    gender CHAR
+);
+
+DESC STUDENT;
+
+INSERT INTO STUDENT (stdid, stdname, dob, doj, fee, gender)
+VALUES (1, 'SHAREEF', '2001-01-10', '2001-10-05', 10000, 'M');
+
+INSERT INTO STUDENT (stdid, stdname, dob, doj, fee, gender)
+VALUES (2, 'NADEEM', '2019-11-3', '2001-10-26', 11000, 'M');
+
+ALTER TABLE STUDENT ADD PHONE_NO INT(10);
+
+ALTER TABLE STUDENT CHANGE COLUMN PHONE_NO STUDENT_NO INT(10);
+
+ALTER TABLE STUDENT RENAME TO STUDENINFO;
+
+SELECT * FROM STUDENT; 
+
+ALTER TABLE STUDENT DROP COLUMN gender;
+
+DELETE FROM STUDENINFO WHERE STDID = 2;
+ update studeninfo
+ set Student_no='1234567890'
+ where stdid=1;
+ SELECT * FROM STUDENT; 
